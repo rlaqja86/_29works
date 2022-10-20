@@ -5,31 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bed7af52-5d1a-4ca7-a2cc-2aafad4aea63" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/OrderDispatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/command/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/command/OrderListCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/command/QuitCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/product/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/product/ProductConstraint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/product/ProductInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/product/exception/NoMatchedProductException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/product/exception/SoldOutException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/items.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/_29cm/homework/order/command/OrderListCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/_29cm/homework/product/ProductInitializerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/dto/OrderResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/_29cm/homework/product/ProductInitializerAsyncTest.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/command/OrderListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/command/OrderListCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/product/ProductInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/product/ProductInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/_29cm/homework/product/ProductInitializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/_29cm/homework/product/ProductInitializerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +27,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -63,8 +49,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -88,21 +74,24 @@
     "RequestMappingsPanelWidth1": "75",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "Spock",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Spock": "spock.lang.Specification",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "spring.configuration.checksum": "c24637402c1eec30ace218a12d043d45"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/build" />
       <recent name="$PROJECT_DIR$/src/main/resources/data" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
+      <recent name="spock.lang.Specification" />
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -110,8 +99,8 @@
       <recent name="org._29cm.homework.order.command" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ProductInitializerTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread">
-    <configuration name="ProductInitializerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="JUnit.ProductInitializerTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread">
+    <configuration name="ProductInitializerAsyncTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -124,7 +113,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org._29cm.homework.product.ProductInitializerTest&quot;" />
+            <option value="&quot;org._29cm.homework.product.ProductInitializerAsyncTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ProductInitializerAsyncTest.async test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org._29cm.homework.product.ProductInitializerAsyncTest.async test&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,59 +192,36 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ProductInitializerTest.soldout_exception_thrown_when_stock_is_lesser_then_order" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org._29cm.homework.product.ProductInitializerTest.soldout_exception_thrown_when_stock_is_lesser_then_order&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="ProductInitializerTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kr.co._29cm.homework.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org._29cm.homework.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org._29cm.homework.product" />
+      <option name="MAIN_CLASS_NAME" value="org._29cm.homework.product.ProductInitializerTest" />
+      <option name="METHOD_NAME" value="sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="ProductInitializerTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org._29cm.homework.product.ProductInitializerTest.test&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="kr.co._29cm.homework.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org._29cm.homework.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductInitializerTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread" />
+        <item itemvalue="Gradle.ProductInitializerAsyncTest" />
+        <item itemvalue="Gradle.ProductInitializerAsyncTest.async test" />
         <item itemvalue="Gradle.ProductInitializerTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread" />
         <item itemvalue="Gradle.ProductInitializerTest.getAll_should_return_all_items_from_csv_after_init" />
-        <item itemvalue="Gradle.ProductInitializerTest" />
-        <item itemvalue="Gradle.ProductInitializerTest.soldout_exception_thrown_when_stock_is_lesser_then_order" />
-        <item itemvalue="Gradle.ProductInitializerTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +234,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666148429381</updated>
       <workItem from="1666148430765" duration="2676000" />
-      <workItem from="1666151526572" duration="8873000" />
+      <workItem from="1666151526572" duration="23446000" />
     </task>
     <servers />
   </component>
@@ -263,15 +252,7 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/_29cm/homework/product/ProductInitializer.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/kr_co__29cm_homework$ProductInitializerAsyncTest.ic" NAME="ProductInitializerAsyncTest Coverage Results" MODIFIED="1666244164575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

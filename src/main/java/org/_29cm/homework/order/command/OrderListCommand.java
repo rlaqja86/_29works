@@ -38,8 +38,10 @@ public class OrderListCommand implements Command {
                 }
 
                 productInitializer.order(Long.parseLong(productId), Long.parseLong(orderCount));
+
             }
         } catch (Exception exception) {
+            System.out.println("soldout");
             log.error("Failed process during order", exception);
         }
     }

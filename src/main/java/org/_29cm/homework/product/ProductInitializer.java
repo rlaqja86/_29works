@@ -3,6 +3,7 @@ package org._29cm.homework.product;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 import lombok.extern.slf4j.Slf4j;
+import org._29cm.homework.order.dto.OrderResponse;
 import org._29cm.homework.product.exception.NoMatchedProductException;
 import org._29cm.homework.product.exception.SoldOutException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,7 @@ public class ProductInitializer {
        return new ArrayList<>(PRODUCTS.values());
     }
 
-    public void order(Long productId, Long sellCount) {
+    public synchronized OrderResponse order(Long productId, Long sellCount) {
       Product product = PRODUCTS.get(productId);
 
       if (product == null) {
@@ -48,8 +49,8 @@ public class ProductInitializer {
       if (remainCount < 0) {
           throw new SoldOutException("Stock is all Soldout!!");
       }
-
-      product.setStockCount(remainCount);
+        product.setStockCount(remainCount);
+        return OrderResponse.builder().isSuccess(true).build();
     }
 
     private LinkedHashMap<Long, Product> getProductsFromCsv() throws CsvValidationException, IOException {
