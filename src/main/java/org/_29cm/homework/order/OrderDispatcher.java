@@ -1,9 +1,6 @@
 package org._29cm.homework.order;
 
 import org._29cm.homework.order.command.Command;
-import org._29cm.homework.product.Product;
-import org._29cm.homework.product.ProductInitializer;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;

@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bed7af52-5d1a-4ca7-a2cc-2aafad4aea63" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/dto/OrderResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/_29cm/homework/product/ProductInitializerAsyncTest.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/command/OrderListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/command/OrderListCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/product/ProductInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/product/ProductInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/_29cm/homework/product/ProductInitializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/_29cm/homework/product/ProductInitializerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/OrderDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/OrderDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/command/OrderListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/command/OrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/dto/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/order/dto/OrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/product/ProductInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/_29cm/homework/product/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/_29cm/homework/order/command/OrderListCommandTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/_29cm/homework/product/ProductInitializerAsyncTest.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/_29cm/homework/product/ProductInitializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/_29cm/homework/product/OrderServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,100 +99,8 @@
       <recent name="org._29cm.homework.order.command" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductInitializerTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread">
-    <configuration name="ProductInitializerAsyncTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org._29cm.homework.product.ProductInitializerAsyncTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProductInitializerAsyncTest.async test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org._29cm.homework.product.ProductInitializerAsyncTest.async test&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProductInitializerTest.getAll_should_return_all_items_from_csv_after_init" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org._29cm.homework.product.ProductInitializerTest.getAll_should_return_all_items_from_csv_after_init&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProductInitializerTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org._29cm.homework.product.ProductInitializerTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProductInitializerTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.OrderServiceTest.deliveryFee_is_not_added_when_total_order_is_over_50000">
+    <configuration name="OrderServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kr.co._29cm.homework.test" />
       <extension name="coverage">
         <pattern>
@@ -201,7 +109,70 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org._29cm.homework.product" />
-      <option name="MAIN_CLASS_NAME" value="org._29cm.homework.product.ProductInitializerTest" />
+      <option name="MAIN_CLASS_NAME" value="org._29cm.homework.product.OrderServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceTest.deliveryFee_is_added_when_total_order_is_lesser_than_50000" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kr.co._29cm.homework.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org._29cm.homework.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org._29cm.homework.product" />
+      <option name="MAIN_CLASS_NAME" value="org._29cm.homework.product.OrderServiceTest" />
+      <option name="METHOD_NAME" value="deliveryFee_is_added_when_total_order_is_lesser_than_50000" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceTest.deliveryFee_is_not_added_when_total_order_is_over_50000" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kr.co._29cm.homework.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org._29cm.homework.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org._29cm.homework.product" />
+      <option name="MAIN_CLASS_NAME" value="org._29cm.homework.product.OrderServiceTest" />
+      <option name="METHOD_NAME" value="deliveryFee_is_not_added_when_total_order_is_over_50000" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceTest.sold_out_exception_thrown_when_stock_is_lesser_then_order" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kr.co._29cm.homework.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org._29cm.homework.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org._29cm.homework.product" />
+      <option name="MAIN_CLASS_NAME" value="org._29cm.homework.product.OrderServiceTest" />
+      <option name="METHOD_NAME" value="sold_out_exception_thrown_when_stock_is_lesser_then_order" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kr.co._29cm.homework.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org._29cm.homework.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org._29cm.homework.product" />
+      <option name="MAIN_CLASS_NAME" value="org._29cm.homework.product.OrderServiceTest" />
       <option name="METHOD_NAME" value="sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -217,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProductInitializerTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread" />
-        <item itemvalue="Gradle.ProductInitializerAsyncTest" />
-        <item itemvalue="Gradle.ProductInitializerAsyncTest.async test" />
-        <item itemvalue="Gradle.ProductInitializerTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread" />
-        <item itemvalue="Gradle.ProductInitializerTest.getAll_should_return_all_items_from_csv_after_init" />
+        <item itemvalue="JUnit.OrderServiceTest.deliveryFee_is_not_added_when_total_order_is_over_50000" />
+        <item itemvalue="JUnit.OrderServiceTest.deliveryFee_is_added_when_total_order_is_lesser_than_50000" />
+        <item itemvalue="JUnit.OrderServiceTest" />
+        <item itemvalue="JUnit.OrderServiceTest.sold_out_exception_thrown_when_stock_is_lesser_then_order" />
+        <item itemvalue="JUnit.OrderServiceTest.sold_out_exception_thrown_when_stock_is_lesser_then_order_in_multiThread" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +205,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666148429381</updated>
       <workItem from="1666148430765" duration="2676000" />
-      <workItem from="1666151526572" duration="23446000" />
+      <workItem from="1666151526572" duration="30516000" />
     </task>
     <servers />
   </component>

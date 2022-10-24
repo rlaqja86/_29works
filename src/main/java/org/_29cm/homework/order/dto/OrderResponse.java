@@ -7,4 +7,6 @@ import lombok.Getter;
 @Getter
 public class OrderResponse {
     private boolean isSuccess;
+    private Long orderedPrice;
+    private Long totalPrice;
 }
