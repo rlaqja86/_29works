@@ -1,3 +1,9 @@
+# 1.프로젝트 환경
+
+### SpringBoot, Gradle
+
+# 2.실행 과정
+
 1.OrderController 의 runInput을 통해 콘솔에서 명령어를 입력 받습니다.
 
 2.input을 받으면 input에 해당하는 command 인터페이스를 검색합니다.
