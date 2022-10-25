@@ -1,9 +1,11 @@
-package org._29cm.homework.product;
+package org._29cm.homework.order.service;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 import lombok.extern.slf4j.Slf4j;
-import org._29cm.homework.order.dto.OrderResponse;
+import org._29cm.homework.order.model.OrderResponse;
+import org._29cm.homework.order.model.Response;
+import org._29cm.homework.product.model.Product;
 import org._29cm.homework.product.exception.NoMatchedProductException;
 import org._29cm.homework.product.exception.SoldOutException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,15 +22,13 @@ import static org._29cm.homework.product.ProductConstraint.*;
 @Slf4j
 public class OrderService {
     private final LinkedHashMap<Long, Product> productRepositoryMap;
-    private final String ORDERED_PRODUCT_DISPLAY_FORMAT = "%s - %s개";
-    private final String ORDERED_PRICE_DISPLAY_FORMAT = "주문금액: %s원";
-    private final String TOTAL_PRICE_DISPLAY_FORMAT = "지불금액: %s원";
 
     @Autowired
     public OrderService() {
         try {
             this.productRepositoryMap = getProductsFromCsv();
         } catch (CsvValidationException | IOException e) {
+            log.error("[OrderService] initialization failed due to exception :", e);
             throw new RuntimeException(e);
         }
     }
@@ -37,20 +37,21 @@ public class OrderService {
         return new ArrayList<>(productRepositoryMap.values());
     }
 
-    public synchronized OrderResponse order(Map<Long, Long> productMap) {
-        Long orderedPrice = 0L;
-        Long deliveryFee = 2500L;
-
+    public synchronized Response<OrderResponse> proceed(Map<Long, Long> productMap) {
+        long orderedPrice = 0L;
         System.out.println("-----------------------------------------");
 
         for (Map.Entry<Long, Long> entry : productMap.entrySet()) {
-            orderedPrice += processOrder(entry.getKey(), entry.getValue());
+            orderedPrice += proceed(entry.getKey(), entry.getValue());
         }
 
         Long totalPrice = orderedPrice;
-        if (orderedPrice < 50000L) {
-            totalPrice += deliveryFee;
+
+
+        if (orderedPrice < DELIVERY_FEE_FREE_THRESHOLD && orderedPrice > 0L) {
+            totalPrice += DELIVERY_FEE;
         }
+
 
         System.out.println("-----------------------------------------");
         System.out.println(String.format(ORDERED_PRICE_DISPLAY_FORMAT, orderedPrice));
@@ -58,29 +59,29 @@ public class OrderService {
         System.out.println(String.format(TOTAL_PRICE_DISPLAY_FORMAT, totalPrice));
         System.out.println("-----------------------------------------");
 
-        return OrderResponse.builder()
+        return new Response<OrderResponse>(OrderResponse.builder()
                 .isSuccess(true)
                 .orderedPrice(orderedPrice)
                 .totalPrice(totalPrice)
-                .build();
+                .build(), "success");
     }
 
-    private Long processOrder(Long productId, Long orderCount) {
+    private Long proceed(Long productId, Long orderAmount) {
         Product product = productRepositoryMap.get(productId);
         if (product == null) {
             throw new NoMatchedProductException("No matched Product found!");
         }
 
-        long remainCount = product.getStockCount() - orderCount;
+        long remainingAmount = product.getStockCount() - orderAmount;
 
-        if (remainCount < 0) {
-            throw new SoldOutException("Stock is all Soldout!!");
+        if (remainingAmount < SOLD_OUT) {
+            throw new SoldOutException("Stock is all Soldout!");
         }
-        product.setStockCount(remainCount);
+        product.setStockCount(remainingAmount);
 
-        System.out.println(String.format(ORDERED_PRODUCT_DISPLAY_FORMAT, product.getTitle(), orderCount));
+        System.out.println(String.format(ORDERED_PRODUCT_DISPLAY_FORMAT, product.getTitle(), orderAmount));
 
-        return product.getPrice() * orderCount;
+        return product.getPrice() * orderAmount;
     }
 
     private LinkedHashMap<Long, Product> getProductsFromCsv() throws CsvValidationException, IOException {

@@ -1,11 +1,10 @@
 package org._29cm.homework.order.command;
 
 import lombok.extern.slf4j.Slf4j;
-import org._29cm.homework.product.Product;
-import org._29cm.homework.product.OrderService;
+import org._29cm.homework.product.model.Product;
+import org._29cm.homework.order.service.OrderService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
-import org.springframework.util.NumberUtils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -34,30 +33,31 @@ public class OrderCommand implements Command {
                 String productId = buf.readLine();
                 System.out.println(productId);
                 System.out.println("수량 : ");
-                String orderCount = buf.readLine();
-                System.out.println(orderCount);
+                String orderAmount = buf.readLine();
+                System.out.println(orderAmount);
 
-                if (StringUtils.isNumeric(productId) && StringUtils.isNumeric(orderCount)) {
-                    orderMap.put(Long.parseLong(productId), Long.parseLong(orderCount));
+                if (StringUtils.isNumeric(productId) && StringUtils.isNumeric(orderAmount)) {
+                    orderMap.put(Long.parseLong(productId), Long.parseLong(orderAmount));
                 }
 
-                if (isQuitOrder(productId, orderCount)) {
-                    orderService.order(orderMap);
+                if (proceedOrder(productId, orderAmount)) {
+                    if (!orderMap.isEmpty()) {
+                        orderService.proceed(orderMap);
+                    }
                     break;
                 }
             }
         } catch (Exception exception) {
-            System.out.println("soldout");
             log.error("Failed process during order", exception);
         }
     }
 
     @Override
-    public boolean isMatch(String command) {
+    public boolean match(String command) {
         return StringUtils.equalsIgnoreCase(command, "o");
     }
 
-    private boolean isQuitOrder(String productId, String orderCount) {
+    private boolean proceedOrder(String productId, String orderCount) {
         return (StringUtils.equalsIgnoreCase(productId, COMPLETE_ORDER_COMMAND) ||
                 StringUtils.equalsIgnoreCase(orderCount, COMPLETE_ORDER_COMMAND));
     }

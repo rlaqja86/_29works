@@ -1,4 +1,4 @@
-package org._29cm.homework.product;
+package org._29cm.homework.product.model;
 
 import lombok.Builder;
 import lombok.Data;

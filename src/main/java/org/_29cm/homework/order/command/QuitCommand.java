@@ -12,7 +12,7 @@ public class QuitCommand implements Command {
     }
 
     @Override
-    public boolean isMatch(String command) {
+    public boolean match(String command) {
         return StringUtils.equalsIgnoreCase(command, "q");
     }
 }
